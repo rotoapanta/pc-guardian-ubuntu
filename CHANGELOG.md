@@ -7,7 +7,7 @@
 - PC Guardian is now formally limited to read-only diagnostics and monitoring.
 - Removed remaining Actions/remediation components and any related packaging references.
 - Removed the obsolete YAML template; API provisioning is now the authoritative source.
-- Updated `VERSION`, banner, configuration, FastAPI, and package metadata to version 2.4.9.
+- Updated `VERSION`, banner, configuration, and package metadata to version 2.4.9.
 - Removed the virtual environment, logs, incidents, `__pycache__`, and `*.egg-info` from the package.
 - Replaced the API token with `CHANGE_ME` and added support for the `ZABBIX_API_TOKEN` environment variable.
 - Consolidated logging with standard levels plus `SUCCESS`; removed the `ACTION` level.

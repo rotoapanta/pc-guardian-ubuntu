@@ -16,18 +16,13 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-web = [
-  "fastapi>=0.116,<1",
-  "uvicorn[standard]>=0.35,<1",
-  "Jinja2>=3.1,<4"
-]
 dev = [
   "pytest>=8.4,<9",
   "ruff>=0.12,<1"
 ]
 
 [tool.setuptools.packages.find]
-include = ["core*", "monitors*", "diagnostics*", "integrations*", "web*", "zabbix*"]
+include = ["core*", "monitors*", "diagnostics*", "integrations*", "zabbix*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

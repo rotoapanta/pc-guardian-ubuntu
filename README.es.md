@@ -82,7 +82,6 @@ pc-guardian-ubuntu/
 │   └── 07-uninstall_systemd.sh
 ├── systemd/
 ├── tests/
-├── web/
 ├── zabbix/
 ├── .gitignore
 ├── CHANGELOG.md
@@ -91,7 +90,6 @@ pc-guardian-ubuntu/
 ├── README.es.md
 ├── requirements.txt
 ├── pyproject.toml
-├── UPGRADE_2.4.9.md
 └── VERSION
 ```
 
