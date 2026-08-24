@@ -1,0 +1,14 @@
+pc-guardian-ubuntu-env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+config/config.yaml
+logs/*.log
+data/*.db
+data/incidents/*.json
+.env

@@ -1,0 +1,14 @@
+[Unit]
+Description=PC Guardian Ubuntu
+After=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+WorkingDirectory=/path/to/pc-guardian-ubuntu
+ExecStart=/path/to/pc-guardian-ubuntu/pc-guardian-ubuntu-env/bin/python /path/to/pc-guardian-ubuntu/main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,52 @@
+app:
+  name: "PC Guardian Ubuntu"
+  sample_interval_seconds: 2
+  console_summary_seconds: 10
+  incident_directory: "data/incidents"
+
+logging:
+  level: "INFO"
+  file: "logs/pc_guardian.log"
+  warnings_file: "logs/warnings.log"
+  actions_file: "logs/actions.log"
+  max_bytes: 10485760
+  backup_count: 5
+
+limits:
+  cpu_percent: 95
+  memory_percent: 92
+  memory_available_mb: 700
+  swap_percent: 80
+  disk_percent: 90
+  cpu_temperature_c: 85
+  nvme_temperature_c: 75
+  load_per_cpu: 1.50
+  psi_cpu_avg10: 50
+  psi_memory_avg10: 25
+  psi_io_avg10: 25
+  d_state_count: 2
+  i915_d_state_count: 1
+  consecutive_samples: 5
+
+zabbix:
+  enabled: true
+  server: "192.168.1.143"
+  port: 10051
+  host: "RCTG-PC"
+  sender_binary: "/usr/bin/zabbix_sender"
+  send_interval_seconds: 10
+
+  api:
+    enabled: true
+    url: "http://192.168.1.143/zabbix/api_jsonrpc.php"
+    token: "YOUR_TOKEN"
+    verify_tls: true
+    host_group: "Ubuntu Desktop"
+    template_group: "Templates/Ubuntu"
+    template_name: "Ubuntu Desktop"
+
+watchlist:
+  - snapd
+  - firefox
+  - gnome-shell
+  - Xorg
