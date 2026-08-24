@@ -1,4 +1,4 @@
-<p align="right"><a href="README.es.md">Español</a></p>
+<p align="right"><a href="README.md">English</a></p>
 
 # <p align="center">PC Guardian Ubuntu</p>
 
@@ -16,49 +16,51 @@
     <a href="https://github.com/rotoapanta/pc-guardian-ubuntu/fork"><img src="https://img.shields.io/github/forks/rotoapanta/pc-guardian-ubuntu?style=social" alt="GitHub forks"></a>
 </p>
 
-**PC Guardian Ubuntu** is a read-only diagnostic and monitoring agent for Ubuntu workstations.
+**PC Guardian Ubuntu** es un agente de diagnóstico y monitoreo de solo lectura para estaciones de trabajo Ubuntu.
 
-It continuously collects operating-system telemetry, detects sustained diagnostic conditions, preserves freeze evidence, monitors D-state and Intel `i915` related processes, and exports metrics to **Zabbix 7** for centralized visualization, historical analysis, graphs, and trigger evaluation.
+Recopila telemetría del sistema operativo, detecta condiciones sostenidas, conserva evidencia de congelamientos, monitorea procesos en estado D y eventos relacionados con Intel `i915`, y exporta métricas a **Zabbix 7**.
 
-PC Guardian is intentionally designed as a **diagnostic and monitoring system only**. It does not terminate processes, restart services, renice applications, or execute automatic remediation actions.
-
----
-
-## ✨ Features
-
-- Read-only architecture.
-- CPU, RAM, swap, disk and temperature monitoring.
-- Linux PSI monitoring.
-- Process, D-state and Intel i915 diagnostics.
-- Freeze evidence collection.
-- Zabbix Sender integration.
-- Automatic, idempotent Zabbix provisioning.
-- 32 Zabbix items.
-- 12 Zabbix triggers.
-- 7 predefined graphs.
-- Professional logging.
-- systemd integration.
-- Automated validation with pytest and Ruff.
-- Docstrings and type hints.
+PC Guardian está diseñado como un **sistema de diagnóstico y monitoreo únicamente**. No termina procesos, no reinicia servicios, no cambia prioridades ni ejecuta acciones automáticas de remediación.
 
 ---
 
-## 🛠️ System Requirements
+## ✨ Características
 
-| Component | Requirement |
-|-----------|-------------|
-| Operating System | Ubuntu 24.04 LTS |
+- Arquitectura de solo lectura.
+- Monitoreo de CPU, RAM, swap, disco y temperaturas.
+- Monitoreo Linux PSI.
+- Monitoreo de procesos.
+- Detección D-state.
+- Diagnóstico Intel i915.
+- Evidencia de congelamientos.
+- Integración con Zabbix Sender.
+- Aprovisionamiento Zabbix automático e idempotente.
+- 32 items Zabbix.
+- 12 triggers.
+- 7 gráficas.
+- Logging profesional.
+- Integración con systemd.
+- Validación con pytest y Ruff.
+- Docstrings y type hints.
+
+---
+
+## 🛠️ Requisitos
+
+| Componente | Requisito |
+|-----------|-----------|
+| Sistema operativo | Ubuntu 24.04 LTS |
 | Python | 3.12+ |
 | Zabbix Server | 7.0.x |
-| Zabbix Sender | 7.0.x recommended |
-| systemd | Required for service mode |
-| lm-sensors | Required for temperature monitoring |
-| Linux PSI | `/proc/pressure` enabled |
-| Intel i915 | Optional |
+| Zabbix Sender | 7.0.x recomendado |
+| systemd | Requerido para modo servicio |
+| lm-sensors | Requerido para temperaturas |
+| Linux PSI | `/proc/pressure` habilitado |
+| Intel i915 | Opcional |
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Estructura del proyecto
 
 ```text
 pc-guardian-ubuntu/
@@ -95,7 +97,7 @@ pc-guardian-ubuntu/
 
 ---
 
-## 🚀 Installation
+## 🚀 Instalación
 
 ```bash
 cd ~/Documentos/Projects
@@ -109,14 +111,14 @@ source pc-guardian-ubuntu-env/bin/activate
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Configuración
 
 ```bash
 cp config/config.example.yaml config/config.yaml
 nano config/config.yaml
 ```
 
-Never commit `config/config.yaml` with credentials or API tokens.
+Nunca publiques `config/config.yaml` con credenciales o tokens API.
 
 ---
 
@@ -128,13 +130,13 @@ Never commit `config/config.yaml` with credentials or API tokens.
 
 ---
 
-## ✅ Project Validation
+## ✅ Validación
 
 ```bash
 ./scripts/03-validate_project.sh
 ```
 
-Expected:
+Resultado esperado:
 
 ```text
 10 passed
@@ -144,13 +146,13 @@ All checks passed!
 
 ---
 
-## 📊 Zabbix Provisioning
+## 📊 Aprovisionamiento Zabbix
 
 ```bash
 ./scripts/04-provision_zabbix.sh
 ```
 
-| Object | Definition |
+| Objeto | Definición |
 |--------|------------|
 | Host Group | `Ubuntu Desktop` |
 | Template Group | `Templates/Ubuntu` |
@@ -159,51 +161,40 @@ All checks passed!
 | Triggers | 12 |
 | Graphs | 7 |
 
-Hosts are created manually in Zabbix.
+Los hosts se crean manualmente en Zabbix.
 
 ---
 
-## 📈 Main Zabbix Metrics
+## 📈 Principales métricas
 
-| Metric | Key | Unit |
-|--------|-----|------|
-| CPU utilization | `pcguardian.cpu.util` | `%` |
-| CPU temperature | `pcguardian.cpu.temperature` | `°C` |
-| NVMe temperature | `pcguardian.nvme.temperature` | `°C` |
-| Memory utilization | `pcguardian.memory.util` | `%` |
-| Available memory | `pcguardian.memory.available` | `B` |
-| Swap utilization | `pcguardian.swap.util` | `%` |
-| Root disk utilization | `pcguardian.disk.root.util` | `%` |
-| Root disk free | `pcguardian.disk.root.free` | `B` |
-| Disk read | `pcguardian.disk.read` | `Bps` |
-| Disk write | `pcguardian.disk.write` | `Bps` |
+| Métrica | Key | Unidad |
+|--------|-----|--------|
+| Utilización CPU | `pcguardian.cpu.util` | `%` |
+| Temperatura CPU | `pcguardian.cpu.temperature` | `°C` |
+| Temperatura NVMe | `pcguardian.nvme.temperature` | `°C` |
+| Utilización memoria | `pcguardian.memory.util` | `%` |
+| Memoria disponible | `pcguardian.memory.available` | `B` |
+| Utilización swap | `pcguardian.swap.util` | `%` |
+| Uso disco raíz | `pcguardian.disk.root.util` | `%` |
+| Disco raíz libre | `pcguardian.disk.root.free` | `B` |
+| Lectura disco | `pcguardian.disk.read` | `Bps` |
+| Escritura disco | `pcguardian.disk.write` | `Bps` |
 | PSI CPU avg10 | `pcguardian.psi.cpu.avg10` | `%` |
-| PSI memory avg10 | `pcguardian.psi.memory.avg10` | `%` |
+| PSI memoria avg10 | `pcguardian.psi.memory.avg10` | `%` |
 | PSI I/O avg10 | `pcguardian.psi.io.avg10` | `%` |
-| Process count | `pcguardian.process.count` | — |
-| D-state count | `pcguardian.process.dstate.count` | — |
-| i915 D-state count | `pcguardian.process.i915.dstate.count` | — |
+| Conteo procesos | `pcguardian.process.count` | — |
+| Conteo D-state | `pcguardian.process.dstate.count` | — |
+| Conteo i915 D-state | `pcguardian.process.i915.dstate.count` | — |
 
 ---
 
-## 🚨 Zabbix Triggers
+## 🚨 Triggers Zabbix
 
-The template defines 12 diagnostic triggers covering:
-
-- Missing data
-- Sustained CPU load
-- CPU temperature
-- NVMe temperature
-- Root filesystem utilization
-- Memory pressure
-- Swap combined with memory pressure
-- I/O pressure
-- Persistent D-state processes
-- Persistent Intel i915 D-state processes
+Los 12 triggers cubren CPU, temperaturas, disco, presión de memoria, swap combinado con presión de memoria, I/O, D-state e Intel i915.
 
 ---
 
-## 📉 Zabbix Graphs
+## 📉 Gráficas Zabbix
 
 1. Ubuntu Desktop: CPU
 2. Ubuntu Desktop: Temperatures
@@ -215,7 +206,7 @@ The template defines 12 diagnostic triggers covering:
 
 ---
 
-## 🔍 System Diagnostics
+## 🔍 Diagnóstico del sistema
 
 ```bash
 ./scripts/05-system_diagnostic.sh
@@ -223,7 +214,7 @@ The template defines 12 diagnostic triggers covering:
 
 ---
 
-## ▶️ Manual Execution
+## ▶️ Ejecución manual
 
 ```bash
 source pc-guardian-ubuntu-env/bin/activate
@@ -232,15 +223,15 @@ python3 main.py
 
 ---
 
-## ⚙️ systemd Service
+## ⚙️ Servicio systemd
 
-Install:
+Instalar:
 
 ```bash
 ./scripts/06-install_systemd.sh
 ```
 
-Status:
+Estado:
 
 ```bash
 systemctl status pc-guardian.service --no-pager -l
@@ -252,7 +243,7 @@ Logs:
 journalctl -u pc-guardian.service -f
 ```
 
-Uninstall:
+Desinstalar:
 
 ```bash
 ./scripts/07-uninstall_systemd.sh
@@ -260,29 +251,17 @@ Uninstall:
 
 ---
 
-## 🔒 Read-Only Design
+## 🔒 Diseño de solo lectura
 
-PC Guardian can:
+PC Guardian puede recopilar, diagnosticar, preservar evidencia y exportar telemetría a Zabbix.
 
-```text
-Collect
-   ↓
-Diagnose
-   ↓
-Preserve evidence
-   ↓
-Export telemetry
-   ↓
-Zabbix
-```
-
-PC Guardian does **not** kill processes, send SIGTERM/SIGKILL, restart processes or services, renice applications, execute remediation commands, or modify kernel parameters.
+PC Guardian **no** mata procesos, no envía SIGTERM/SIGKILL, no reinicia procesos o servicios, no cambia prioridades, no ejecuta remediaciones y no modifica parámetros del kernel.
 
 ---
 
-## 🔐 Security
+## 🔐 Seguridad
 
-Excluded from Git:
+Se excluyen de Git:
 
 ```text
 config/config.yaml
@@ -295,7 +274,7 @@ data/incidents/
 
 ---
 
-## 🧪 Development
+## 🧪 Desarrollo
 
 ```bash
 source pc-guardian-ubuntu-env/bin/activate
@@ -309,15 +288,15 @@ python3 -m pytest -v
 
 robertocarlos.toapanta@gmail.com
 
-## 🛟 Support
+## 🛟 Soporte
 
 robertocarlos.toapanta@gmail.com
 
-## 📄 License
+## 📄 Licencia
 
-See [LICENSE](LICENSE).
+Consulte [LICENSE](LICENSE).
 
-## 👥 Authors
+## 👥 Autores
 
 - [@rotoapanta](https://github.com/rotoapanta)
 
@@ -325,28 +304,25 @@ See [LICENSE](LICENSE).
 
 ## 📜 Changelog
 
-This project follows Keep a Changelog and Semantic Versioning.
-
 ### [Unreleased]
 
 -
 
 ### 2.4.9 – 2026-08-24
 
-- Consolidated PC Guardian as a read-only diagnostic and monitoring system.
-- Removed automatic remediation capabilities.
-- Added centralized version handling.
-- Added Zabbix Host Group, Template Group and Template provisioning.
-- Added 32 items, 12 triggers and 7 graphs.
-- Added Linux PSI, D-state and Intel i915 monitoring.
-- Added incident evidence collection.
-- Added idempotent Zabbix API provisioning.
-- Added systemd integration.
-- Added automated validation, tests and Ruff checks.
+- Consolidación como sistema de diagnóstico y monitoreo de solo lectura.
+- Eliminación de remediación automática.
+- Manejo centralizado de versión.
+- Aprovisionamiento Zabbix.
+- 32 items, 12 triggers y 7 gráficas.
+- Monitoreo PSI, D-state e Intel i915.
+- Evidencia de incidentes.
+- Integración systemd.
+- Validación, tests y Ruff.
 
 ---
 
-## 🔗 Links
+## 🔗 Enlaces
 
 [![GitHub](https://img.shields.io/badge/GitHub-rotoapanta-181717?style=for-the-badge&logo=github)](https://github.com/rotoapanta)
 
