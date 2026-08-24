@@ -10,7 +10,7 @@
     <a href="https://github.com/rotoapanta/pc-guardian-ubuntu"><img src="https://img.shields.io/github/repo-size/rotoapanta/pc-guardian-ubuntu" alt="GitHub repo size"></a>
     <a href="https://github.com/rotoapanta/pc-guardian-ubuntu/commits"><img src="https://img.shields.io/github/last-commit/rotoapanta/pc-guardian-ubuntu" alt="GitHub last commit"></a>
     <a href="https://www.linux.org/"><img src="https://img.shields.io/badge/Platform-Linux-orange" alt="Linux"></a>
-    <a href="https://github.com/rotoapanta/pc-guardian-ubuntu/blob/main/LICENSE"><img src="https://img.shields.io/github/license/rotoapanta/pc-guardian-ubuntu" alt="License"></a>
+    <a href="https://github.com/rotoapanta/pc-guardian-ubuntu/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
     <a href="https://www.linkedin.com/in/roberto-carlos-toapanta-g/"><img src="https://img.shields.io/badge/Author-Roberto%20Toapanta-brightgreen" alt="Author"></a>
     <a href="#-changelog"><img src="https://img.shields.io/badge/Version-2.4.9-brightgreen" alt="Version"></a>
     <a href="https://github.com/rotoapanta/pc-guardian-ubuntu/fork"><img src="https://img.shields.io/github/forks/rotoapanta/pc-guardian-ubuntu?style=social" alt="GitHub forks"></a>
