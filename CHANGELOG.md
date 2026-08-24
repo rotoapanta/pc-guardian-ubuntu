@@ -2,26 +2,26 @@
 
 ## 2.4.9 - 2026-08-24
 
-### Consolidación y limpieza
+### Consolidation and Cleanup
 
-- PC Guardian queda formalmente limitado a diagnóstico y monitoreo de solo lectura.
-- Eliminados restos de Actions/remediación y cualquier referencia de packaging relacionada.
-- Eliminado el template YAML obsoleto; el provisionamiento API pasa a ser la fuente autoritativa.
-- Actualizados VERSION, banner, configuración, FastAPI y metadata del paquete a 2.4.9.
-- Eliminados del paquete el entorno virtual, logs, incidentes, `__pycache__` y `*.egg-info`.
-- Token API reemplazado por `CHANGE_ME` y soporte para `ZABBIX_API_TOKEN` por variable de entorno.
-- Logger consolidado: niveles estándar + `SUCCESS`; eliminado el nivel `ACTION`.
-- Rutas de configuración, logs e incidentes resueltas desde la raíz del proyecto.
-- Manejo de excepciones afinado en PSI, temperaturas, incidentes e i915.
-- Mantiene unidades base para memoria/disco (`B`) y throughput (`Bps`).
-- Mantiene el estado Zabbix `PENDING → OK/ERROR`.
-- Armonizados umbrales locales de swap/PSI para reducir falsos positivos.
-- Provisionamiento Zabbix conserva idempotencia para Items, Triggers y Graphs.
-- Tests actualizados a las keys actuales y añadidas pruebas de conteo, unidades y modo read-only.
-- Añadido `scripts/validate_project.sh` para compileall + pytest + ruff.
+- PC Guardian is now formally limited to read-only diagnostics and monitoring.
+- Removed remaining Actions/remediation components and any related packaging references.
+- Removed the obsolete YAML template; API provisioning is now the authoritative source.
+- Updated `VERSION`, banner, configuration, FastAPI, and package metadata to version 2.4.9.
+- Removed the virtual environment, logs, incidents, `__pycache__`, and `*.egg-info` from the package.
+- Replaced the API token with `CHANGE_ME` and added support for the `ZABBIX_API_TOKEN` environment variable.
+- Consolidated logging with standard levels plus `SUCCESS`; removed the `ACTION` level.
+- Configuration, log, and incident paths are now resolved from the project root.
+- Refined exception handling for PSI, temperature, incident, and i915 diagnostics.
+- Preserved base units for memory/disk (`B`) and throughput (`Bps`).
+- Preserved the Zabbix state transition `PENDING → OK/ERROR`.
+- Harmonized local swap/PSI thresholds to reduce false positives.
+- Zabbix provisioning remains idempotent for Items, Triggers, and Graphs.
+- Updated tests to use the current keys and added coverage for item counts, units, and read-only behavior.
+- Added `scripts/validate_project.sh` for `compileall` + `pytest` + `ruff`.
 
 ## 2.3.0 - 2026-08-20
 
-- Arquitectura modular inicial.
-- Integración Zabbix Sender y aprovisionamiento API.
-- Diagnóstico D-state/i915, PSI, temperaturas y evidencia de incidentes.
+- Initial modular architecture.
+- Added Zabbix Sender integration and API provisioning.
+- Added D-state/i915 diagnostics, PSI monitoring, temperature monitoring, and incident evidence collection.
