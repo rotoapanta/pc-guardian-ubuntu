@@ -224,7 +224,7 @@ Monitoreo de la utilización del sistema de archivos y almacenamiento.
 
 Visualización de la actividad y tasas de lectura/escritura del disco.
 
-![Ubuntu Desktop - Disk I/O](assets/screenshots/03-zbx-disk-i-o.png)
+![Ubuntu Desktop - Disk I/O](assets/screenshots/03-zbx-disk I-O.png)
 
 ### 6. Ubuntu Desktop: PSI Pressure
 

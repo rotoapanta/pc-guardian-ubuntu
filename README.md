@@ -233,7 +233,7 @@ Monitoring of filesystem and storage utilization.
 
 Visualization of disk activity and read/write throughput.
 
-![Ubuntu Desktop - Disk I/O](assets/screenshots/03-zbx-disk-i-o.png)
+![Ubuntu Desktop - Disk I/O](assets/screenshots/03-zbx-disk I-O.png)
 
 ### 6. Ubuntu Desktop: PSI Pressure
 
