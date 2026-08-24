@@ -30,15 +30,15 @@ limits:
 
 zabbix:
   enabled: true
-  server: "192.168.1.143"
+  server: "YOUR_ZABBIX_SERVER"
   port: 10051
-  host: "RCTG-PC"
+  host: "YOUR_ZABBIX_HOST"
   sender_binary: "/usr/bin/zabbix_sender"
   send_interval_seconds: 10
 
   api:
     enabled: true
-    url: "http://192.168.1.143/zabbix/api_jsonrpc.php"
+    url: "http://YOUR_ZABBIX_SERVER/zabbix/api_jsonrpc.php"
     token: "YOUR_TOKEN"
     verify_tls: true
     host_group: "Ubuntu Desktop"
