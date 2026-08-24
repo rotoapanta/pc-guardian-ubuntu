@@ -203,13 +203,49 @@ The template defines 12 diagnostic triggers covering:
 
 ## 📉 Zabbix Graphs
 
-1. Ubuntu Desktop: CPU
-2. Ubuntu Desktop: Temperatures
-3. Ubuntu Desktop: Memory and Swap
-4. Ubuntu Desktop: Disk Utilization
-5. Ubuntu Desktop: Disk I/O
-6. Ubuntu Desktop: PSI Pressure
-7. Ubuntu Desktop: D-State and i915
+PC Guardian automatically provisions the following graphs in Zabbix 7 to facilitate system performance analysis and the identification of abnormal conditions.
+
+### 1. Ubuntu Desktop: CPU
+
+Visualization of CPU utilization and system load.
+
+![Ubuntu Desktop - CPU](assets/screenshots/01-zbx-cpu.png)
+
+### 2. Ubuntu Desktop: Temperatures
+
+Monitoring of CPU and NVMe temperatures.
+
+![Ubuntu Desktop - Temperatures](assets/screenshots/07-zbx-temperatures.png)
+
+### 3. Ubuntu Desktop: Memory and Swap
+
+Monitoring of RAM and swap utilization.
+
+![Ubuntu Desktop - Memory and Swap](assets/screenshots/05-memory-and-swap.png)
+
+### 4. Ubuntu Desktop: Disk Utilization
+
+Monitoring of filesystem and storage utilization.
+
+![Ubuntu Desktop - Disk Utilization](assets/screenshots/04-zbx-disk-utilization.png)
+
+### 5. Ubuntu Desktop: Disk I/O
+
+Visualization of disk activity and read/write throughput.
+
+![Ubuntu Desktop - Disk I/O](assets/screenshots/03-zbx-disk-i-o.png)
+
+### 6. Ubuntu Desktop: PSI Pressure
+
+Monitoring of Linux Pressure Stall Information (PSI) to identify resource pressure and contention.
+
+![Ubuntu Desktop - PSI Pressure](assets/screenshots/06-psi-pressure.png)
+
+### 7. Ubuntu Desktop: D-State and i915
+
+Monitoring of processes in uninterruptible sleep (`D-state`) and processes related to the Intel i915 graphics driver.
+
+![Ubuntu Desktop - D-State and i915](assets/screenshots/02-zbx-d-state-and-i915.png)
 
 ---
 

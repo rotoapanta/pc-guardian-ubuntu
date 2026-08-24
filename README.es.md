@@ -194,13 +194,49 @@ Los 12 triggers cubren CPU, temperaturas, disco, presión de memoria, swap combi
 
 ## 📉 Gráficas Zabbix
 
-1. Ubuntu Desktop: CPU
-2. Ubuntu Desktop: Temperatures
-3. Ubuntu Desktop: Memory and Swap
-4. Ubuntu Desktop: Disk Utilization
-5. Ubuntu Desktop: Disk I/O
-6. Ubuntu Desktop: PSI Pressure
-7. Ubuntu Desktop: D-State and i915
+PC Guardian aprovisiona automáticamente en Zabbix 7 las siguientes gráficas para facilitar el análisis del desempeño del sistema y la identificación de condiciones anómalas.
+
+### 1. Ubuntu Desktop: CPU
+
+Visualización de la utilización y carga del procesador.
+
+![Ubuntu Desktop - CPU](assets/screenshots/01-zbx-cpu.png)
+
+### 2. Ubuntu Desktop: Temperatures
+
+Monitoreo de las temperaturas del CPU y de la unidad NVMe.
+
+![Ubuntu Desktop - Temperatures](assets/screenshots/07-zbx-temperatures.png)
+
+### 3. Ubuntu Desktop: Memory and Swap
+
+Seguimiento de la utilización de memoria RAM y swap.
+
+![Ubuntu Desktop - Memory and Swap](assets/screenshots/05-memory-and-swap.png)
+
+### 4. Ubuntu Desktop: Disk Utilization
+
+Monitoreo de la utilización del sistema de archivos y almacenamiento.
+
+![Ubuntu Desktop - Disk Utilization](assets/screenshots/04-zbx-disk-utilization.png)
+
+### 5. Ubuntu Desktop: Disk I/O
+
+Visualización de la actividad y tasas de lectura/escritura del disco.
+
+![Ubuntu Desktop - Disk I/O](assets/screenshots/03-zbx-disk-i-o.png)
+
+### 6. Ubuntu Desktop: PSI Pressure
+
+Monitoreo de Linux Pressure Stall Information (PSI) para identificar presión y contención de recursos.
+
+![Ubuntu Desktop - PSI Pressure](assets/screenshots/06-psi-pressure.png)
+
+### 7. Ubuntu Desktop: D-State and i915
+
+Seguimiento de procesos en estado de espera ininterrumpible (`D-state`) y procesos relacionados con el controlador gráfico Intel i915.
+
+![Ubuntu Desktop - D-State and i915](assets/screenshots/02-zbx-d-state-and-i915.png)
 
 ---
 
